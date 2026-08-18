@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{formatting}
+
+\hypersetup{
+  pdftitle={Nitish Deshmukh},
+  pdfauthor={Nitish Deshmukh},
+  pdfauthortitle={ML Engineer},
+  pdfsubject={ML Engineer and Open Source Developer Resume - Machine Learning, Deep Learning, MLOps, Python, TypeScript, Node.js, React, Next.js, Tailwind CSS, shadcn/ui, Nginx, Docker, CI/CD, Vite, Git, MySQL, SQL, MongoDB},
+  pdfkeywords={
+    Machine Learning, Deep Learning, MLOps, Python, 
+    TypeScript, Javascript, React, Next.js, Tailwind CSS, shadcn/ui,
+    Node.js, Bun, REST, Server-Sent Events, Redis,
+    PostgreSQL, Neon, Drizzle, Docker, CI/CD, Vite, Git,
+    Software Engineer, Full Stack, Frontend, Backend,
+    Open Source,
+    Bhilai, India, Open to Work,
+    itsnitish02, nitish-deshmukh, nitishdeshmukh
+  },
+  pdfcreator={pdflatex + XCharter},
+  pdfproducer={Nitish Deshmukh},
+  pdflang={en-US},
+  pdfmetalang={en-US},
+  pdfcontactaddress={Durg - Chhattisgarh - India},
+  pdfcontactemail={nitishdeshmukh24@gmail.com},
+  pdfcontacturl={https://nitishdeshmukh.com},
+  pdfcopyright={Copyright 2026-\the\year\ Nitish Deshmukh. Licensed under Apache-2.0.},
+  pdflicenseurl={https://www.apache.org/licenses/LICENSE-2.0},
+  pdfurl={https://nitishdeshmukh.com},
+  pdfpubtype={other},
+}
+
+\begin{document}
+
+\input{sections/header}
+\vspace{-14pt}
+\input{sections/experience}
+\vspace{-14pt}
+\input{sections/projects}
+\vspace{-14pt}
+\input{sections/skills}
+\vspace{-14pt}
+\input{sections/education}
+
+\embedfile[
+  mimetype=application/ld+json,
+  desc={Schema.org structured data - Nitish Deshmukh},
+  afrelationship={/Supplement}
+]{schema.json}
+
+\embedfile[
+  mimetype=application/json,
+  desc={JSON Resume - Nitish Deshmukh},
+  afrelationship={/Supplement}
+]{resume.json}
+
+\end{document}

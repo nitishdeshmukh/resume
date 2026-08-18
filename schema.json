@@ -1,0 +1,217 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://nitishdeshmukh.com",
+      "name": "Nitish Deshmukh",
+      "alternateName": "nitish",
+      "jobTitle": "ML Engineer",
+      "email": "nitishdeshmukh24@gmail.com",
+      "url": "https://nitishdeshmukh.com",
+      "sameAs": [
+        "https://github.com/nitishdeshmukh",
+        "https://www.linkedin.com/in/nitish-deshmukh",
+        "https://x.com/itsnitish02"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Durg",
+        "addressRegion": "Chhattisgarh",
+        "addressCountry": "IN"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Shri Shankaracharya Technical Campus",
+        "url": "https://sstc.ac.in"
+      },
+      "knowsAbout": [
+        "Machine Learning",
+        "Deep Learning",
+        "Data Science",
+        "MLOps",
+        "Python",
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Node.js",
+        "REST",
+        "Server-Sent Events",
+        "Redis",
+        "PostgreSQL",
+        "Neon",
+        "Drizzle",
+        "Docker",
+        "CI/CD",
+        "Vite"
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Full Stack Developer",
+          "alternateName": [
+            "Full Stack Developer",
+            "FSD",
+            "Developer"
+          ],
+          "occupationLocation": {
+            "@type": "City",
+            "name": "Bhilai"
+          },
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "NAIR Solutions",
+            "url": "https://nairsolutions.org"
+          },
+          "startDate": "2025-11",
+          "endDate": "2026-06"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Backend Developer Intern",
+          "alternateName": [
+            "Backend Developer Intern",
+            "Backend Intern"
+          ],
+          "occupationLocation": {
+            "@type": "City",
+            "name": "Bhilai"
+          },
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "Divyal Technologies",
+            "url": "https://www.divyaltech.com"
+          },
+          "startDate": "2024-08",
+          "endDate": "2024-10"
+        }
+      ],
+      "workExample": [
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "nitishdeshmukh.com",
+          "url": "https://nitishdeshmukh.com",
+          "programmingLanguage": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Better-Auth"
+          ]
+        }
+      ],
+      "copyrightYear": 2026,
+      "dateCreated": "2026",
+      "dateModified": "2026",
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "Nitish Deshmukh"
+      },
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://nitishdeshmukh.com/cv",
+      "name": "Nitish Deshmukh - CV",
+      "alternateName": [
+        "Nitish Deshmukh - Resume",
+        "Nitish Deshmukh - Curriculum Vitae"
+      ],
+      "about": {
+        "@id": "https://nitishdeshmukh.com"
+      },
+      "hasPart": [
+        {
+          "@type": "ItemList",
+          "name": "Work Experience",
+          "alternateName": [
+            "Experience",
+            "Employment History",
+            "Professional Experience",
+            "Career History"
+          ],
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Full Stack Developer at N.A.I.R. Solutions"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Backend Developer Intern at Divyal Technologies"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Education",
+          "alternateName": [
+            "Academic Background",
+            "Qualifications",
+            "Academic History"
+          ],
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Bachelor of Technology in Computer Science and Engineering (Data Science) - Shri Shankaracharya Technical Campus"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Technical Skills",
+          "alternateName": [
+            "Skills",
+            "Core Competencies",
+            "Technologies",
+            "Tech Stack",
+            "Expertise"
+          ],
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Languages: TypeScript, JavaScript, Python"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Frontend: React, Next.js, Tailwind CSS, shadcn/ui"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Backend: Node.js, Bun, REST, Redis"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Data and Tools: PostgreSQL, MongoDB, Docker, CI/CD, Vite"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Projects",
+          "alternateName": [
+            "Personal Projects",
+            "Portfolio",
+            "Open Source Work",
+            "Side Projects"
+          ],
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "nitishdeshmukh.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

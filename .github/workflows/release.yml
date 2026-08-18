@@ -1,0 +1,101 @@
+name: Build and Release Resume
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.tex"
+      - "**.cls"
+      - "**.sty"
+      - "**.json"
+      - ".docker/**"
+      - ".github/workflows/release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  packages: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/latex-builder
+  PDF_NAME: Nitish_Deshmukh_Resume
+
+jobs:
+  release:
+    name: Compile and publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Derive image tags and labels
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=raw,value=latest
+            type=sha,format=short
+
+      - name: Build and push builder image
+        uses: docker/build-push-action@v7
+        with:
+          context: .docker
+          push: ${{ github.ref == 'refs/heads/main' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Stamp metadata dates
+        run: |
+          sed -i "s/\"lastModified\": \".*\"/\"lastModified\": \"$(date -u +'%Y-%m-%d')\"/" resume.json
+          sed -i "s/\"dateModified\": \".*\"/\"dateModified\": \"$(date -u +'%Y')\"/" schema.json
+
+      - name: Compile resume
+        run: |
+          for pass in 1 2; do
+            docker run --rm -v "${{ github.workspace }}:/data" \
+              "$IMAGE:latest" -jobname="$PDF_NAME" main.tex
+          done
+
+      - name: Collect release info
+        id: info
+        run: |
+          {
+            echo "date=$(date -u +'%Y-%m-%d')"
+            echo "size=$(du -h "$PDF_NAME.pdf" | cut -f1)"
+            echo "short_sha=$(git rev-parse --short HEAD)"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Publish release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Resume v${{ github.run_number }} — ${{ steps.info.outputs.date }}
+          body: |
+            **⬇️ [Download the PDF](${{ github.server_url }}/${{ github.repository }}/releases/download/v${{ github.run_number }}/${{ env.PDF_NAME }}.pdf)** &nbsp;·&nbsp; ${{ steps.info.outputs.size }}, compiled ${{ steps.info.outputs.date }}
+
+            <sub>Built with 🐳 `${{ env.IMAGE }}:latest` &nbsp;·&nbsp; commit [`${{ steps.info.outputs.short_sha }}`](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})</sub>
+          files: ${{ env.PDF_NAME }}.pdf
+          make_latest: true
+          fail_on_unmatched_files: true

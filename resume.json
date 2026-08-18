@@ -1,0 +1,140 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Nitish Deshmukh",
+    "label": "ML Engineer",
+    "email": "nitishdeshmukh24@gmail.com",
+    "url": "https://nitishdeshmukh.com",
+    "summary": "ML engineer with experience in building machine learning systems and applications.",
+    "location": {
+      "city": "Bhilai",
+      "region": "Chhattisgarh",
+      "countryCode": "IN"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "nitishdeshmukh",
+        "url": "https://github.com/nitishdeshmukh"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "nitish-deshmukh",
+        "url": "https://www.linkedin.com/in/nitish-deshmukh"
+      },
+      {
+        "network": "X",
+        "username": "itsnitish02",
+        "url": "https://x.com/itsnitish02"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "N.A.I.R. Solutions",
+      "position": "Full Stack Developer",
+      "url": "https://nairsolutions.org",
+      "startDate": "2025-09",
+      "endDate": "2026-06",
+      "location": "Bhilai, Chhattisgarh, India",
+      "highlights": [
+        "Design and build Pro components/blocks, from design mockups to production-ready React",
+        "Build and maintain APIs for various features"
+      ]
+    },
+    {
+      "name": "Divyal Technologies",
+      "position": "Backend Developer Intern",
+      "url": "https://divyaltech.com",
+      "startDate": "2024-08",
+      "endDate": "2024-11",
+      "location": "Bhilai, Chhattisgarh, India",
+      "highlights": [
+        "Worked closely with senior engineers to debug production issues, refactor legacy code, and follow coding standards, resulting in more stable and maintainable releases",
+        "Integrated monday.com boards for real-time data tracking",
+        "Design and implement scalable backend services and RESTful APIs"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Shri Shankaracharya Technical Campus",
+      "url": "https://sstc.ac.in",
+      "area": "Computer Science and Engineering (Data Science)",
+      "studyType": "Bachelor of Technology",
+      "endDate": "2025-07"
+    }
+  ],
+  "skills": [
+    {
+      "name": "AI & Machine Learning",
+      "keywords": [
+        "Machine Learning",
+        "Deep Learning",
+        "Data Science",
+        "MLOps"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "keywords": [
+        "Python",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Databases",
+      "keywords": [
+        "SQL",
+        "PostgreSQL",
+        "MongoDb"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "keywords": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Vite"
+      ]
+    },
+    {
+      "name": "Backend",
+      "keywords": [
+        "Node.js",
+        "Bun",
+        "REST APIs",
+        "Redis"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "keywords": [
+        "Docker",
+        "CI/CD",
+        "nginx"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "anishshobithps.com",
+      "url": "https://nitishdeshmukh.com",
+      "description": "Full-stack personal platform with an MDX blog and an authenticated guestbook built using Cloudflare D1 and R2.",
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Better-Auth"
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://nitishdeshmukh.com",
+    "version": "v2.1.0",
+    "lastModified": "2026-07-18"
+  }
+}
